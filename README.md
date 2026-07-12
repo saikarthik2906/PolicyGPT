@@ -12,7 +12,7 @@ Designed to bypass the heavy system-level SQLite dependencies and native compila
 https://policygpt123.streamlit.app
 
 **Video Walkthrough:**  
-YouTube Link
+[YouTube Link](https://youtu.be/mV8a-aEJzIA?si=bUYkg7GJqEx3fIEG)
 
 **Source Code:**  
 https://github.com/saikarthik2906/PolicyGPT
