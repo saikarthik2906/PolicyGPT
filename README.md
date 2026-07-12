@@ -1,163 +1,108 @@
 ````markdown
 # 🤖 PolicyGPT: Enterprise Document Assistant
 
-A high-performance, ultra-lightweight enterprise **Retrieval-Augmented Generation (RAG)** system built in native Python. This production-ready dashboard extracts documentation intelligence from enterprise policy PDFs, processes textual boundaries natively to guarantee zero-latency execution, and surfaces structured compliance answers powered by the **Groq API**.
+A lightweight and production-ready **Retrieval-Augmented Generation (RAG)** application that enables users to upload enterprise policy PDFs and ask natural language questions with grounded, context-aware responses powered by the **Groq API (Llama 3.1)**.
 
-Designed to bypass the heavy system-level SQLite dependencies and native compilation bottlenecks common in cloud deployments, this platform achieves sub-second context matching and deterministic grounding.
+Built with a custom native Python retrieval pipeline that eliminates heavy vector databases and SQLite dependencies, ensuring fast startup, lightweight deployment, and efficient document search.
+
+---
+
+## 🛠 Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq_API-F55036?style=for-the-badge)
+![Llama](https://img.shields.io/badge/Llama_3.1-6E40C9?style=for-the-badge)
+![PyPDF](https://img.shields.io/badge/PyPDF-0A66C2?style=for-the-badge)
+![RAG](https://img.shields.io/badge/RAG-Native_Python-success?style=for-the-badge)
+
+---
+
+## 📁 Project Structure
+
+```bash
+PolicyGPT/
+│
+├── .streamlit/
+│   └── secrets.toml      # Secure API key storage
+│
+├── app.py                # Streamlit dashboard
+├── rag.py                # Native RAG retrieval engine
+├── requirements.txt      # Project dependencies
+└── README.md             # Project documentation
+```
+
+---
+
+# Screenshots
+
+![Home Page](screenshots/home.png)
+
+![Document Upload](screenshots/upload.png)
+
+![Chat Interface](screenshots/chat.png)
+
+---
+
+## 🚀 Features
+
+### 📄 Intelligent PDF Analysis
+
+- Upload enterprise policy documents
+- Native PDF text extraction
+- Supports multi-page documents
+- Fast document processing
+
+### 🧠 Retrieval-Augmented Generation (RAG)
+
+- Custom context retrieval pipeline
+- Dynamic text chunking
+- Context-aware question answering
+- Grounded responses with reduced hallucinations
+
+### ⚡ High-Performance Architecture
+
+- Native Python retrieval engine
+- No SQLite dependency
+- No FAISS or ChromaDB required
+- Lightweight cloud deployment
+- Optimized for low-latency inference
+
+### 📚 Source Citation
+
+- Displays the document page used for every answer
+- Transparent response generation
+- Easy compliance verification
+
+### 🎨 Modern Enterprise Dashboard
+
+- Professional dark-themed interface
+- Interactive chat experience
+- Session management
+- Clear conversation history
+- Responsive layout
 
 ---
 
 ## 🌐 Live Demo
 
-- **Live Application:** https://policygpt123.streamlit.app/
-- **Video Walkthrough:** https://youtu.be/mV8a-aEJzIA?si=bUYkg7GJqEx3fIEG
-- **Source Code:** https://github.com/saikarthik2906/PolicyGPT
+**Application**
+
+https://policygpt123.streamlit.app/
+
+**Video Walkthrough**
+
+https://youtu.be/mV8a-aEJzIA?si=bUYkg7GJqEx3fIEG
+
+**GitHub Repository**
+
+https://github.com/saikarthik2906/PolicyGPT
 
 ---
 
-# 🏗️ System Architecture
+## ⚙️ Installation
 
-PolicyGPT leverages a highly optimized, custom text-processing pipeline and localized contextual retrieval engine to isolate relevant document sections before passing bounded context to the Large Language Model.
-
-```text
-          [ Upload PDF ]
-                 │
-                 ▼
-      Native Text Extraction (PyPDF)
-                 │
-                 ▼
-    Custom Dynamic Boundary Chunking
-                 │
-                 ▼
- Deterministic Contextual Matching Matrix
-                 │
-      ┌──────────┴──────────┐
-      ▼                     ▼
- Exact Match          Granular Page
- Extraction             Mapping
-      │                     │
-      └──────────┬──────────┘
-                 ▼
- Groq Cloud (Llama 3.1 Inference)
-                 │
-                 ▼
- Structured Response + Source Citations
-```
-
----
-
-# 🛠️ Tech Stack
-
-| Category | Technologies |
-|----------|--------------|
-| Language | Python 3 |
-| Framework | Streamlit |
-| LLM | Groq API (Llama 3.1) |
-| PDF Processing | PyPDF |
-| Retrieval | Native Python Context Matching |
-| Deployment | Streamlit Community Cloud |
-
----
-
-# 🧠 Skills Demonstrated
-
-### 🤖 Generative AI & LLM Engineering
-- Retrieval-Augmented Generation (RAG)
-- Prompt engineering
-- Context grounding
-- Hallucination reduction
-- Token context optimization
-- Response guardrails
-
-### 🏗️ Systems Architecture
-- Lightweight cloud-native deployment
-- Zero cold-start optimization
-- Stateless retrieval pipeline
-- Python 3.14 compatibility
-
-### 📄 Data Engineering
-- Native PDF parsing
-- Dynamic boundary chunking
-- Metadata extraction
-- Context serialization
-- Deterministic retrieval
-
-### 🔒 Security & Compliance
-- Secure API key management
-- Streamlit Secrets integration
-- Sandboxed runtime configuration
-
-### 💻 Full-Stack Development
-- Interactive Streamlit dashboard
-- Session state management
-- Custom HTML/CSS styling
-- Responsive enterprise UI
-
----
-
-# 🚀 Key Features
-
-## 🏢 Enterprise User Interface
-
-- Modern dark-themed enterprise dashboard
-- Dynamic welcome screen
-- Query suggestions
-- Real-time notifications
-- Responsive layout
-
----
-
-## 📄 Lightweight Document Retrieval
-
-- Native Python retrieval engine
-- No SQLite dependency
-- No FAISS dependency
-- No Chroma dependency
-- No C++ compilation requirements
-- Fast startup and deployment
-- Multi-page document support
-
----
-
-## 🧠 Grounded AI Assistant
-
-- Strict context confinement
-- Hallucination reduction
-- Conversational query routing
-- Compliance-focused responses
-- Low-latency Groq inference
-
----
-
-## 📚 Source Traceability
-
-- Exact page citation
-- Transparent answer grounding
-- Document source tracking
-- Conversation reset
-- Index clearing
-
----
-
-# 📁 Project Structure
-
-```text
-PolicyGPT/
-│
-├── .streamlit/
-│   └── secrets.toml
-│
-├── app.py
-├── rag.py
-├── requirements.txt
-└── README.md
-```
-
----
-
-# ⚙️ Installation
-
-## 1. Clone Repository
+Clone the repository
 
 ```bash
 git clone https://github.com/saikarthik2906/PolicyGPT.git
@@ -165,19 +110,13 @@ git clone https://github.com/saikarthik2906/PolicyGPT.git
 cd PolicyGPT
 ```
 
----
-
-## 2. Install Requirements
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 3. Configure API Key
-
-Create the hidden Streamlit configuration folder.
+Create the Streamlit secrets folder
 
 ```bash
 mkdir .streamlit
@@ -189,9 +128,7 @@ Create `secrets.toml`
 GROQ_API_KEY = "your_groq_api_key"
 ```
 
----
-
-## 4. Run the Application
+Run the application
 
 ```bash
 streamlit run app.py
@@ -199,48 +136,46 @@ streamlit run app.py
 
 ---
 
-# 🌐 Production Deployment
+## 🎯 Purpose of the Project
 
-The project is optimized for **Streamlit Community Cloud**.
+This project demonstrates:
 
-### Steps
+- Retrieval-Augmented Generation (RAG)
+- Large Language Model integration
+- Enterprise document intelligence
+- Native Python information retrieval
+- Prompt engineering
+- Context grounding
+- PDF document processing
+- Streamlit application development
+- Cloud deployment optimization
+- Secure API management
 
-1. Fork or clone the GitHub repository.
+Perfect for:
 
-2. Deploy it using Streamlit Community Cloud.
-
-3. Open **Advanced Settings → Secrets**
-
-Paste:
-
-```toml
-GROQ_API_KEY = "gsk_your_production_key"
-```
-
-4. Deploy.
-
-The application typically becomes live in under **90 seconds**.
-
----
-
-# 🔮 Roadmap
-
-- [ ] Hybrid semantic vector search (Pinecone)
-- [ ] OCR support for scanned PDF documents
-- [ ] Multi-document retrieval
-- [ ] Cross-document compliance analysis
-- [ ] Better citation ranking
-- [ ] Conversation history export
+- GenAI portfolio projects
+- Enterprise AI assistants
+- RAG demonstrations
+- LLM application showcases
+- Compliance document analysis
+- Streamlit deployments
 
 ---
 
-# 👨‍💻 Author
+## 🚀 Future Enhancements
 
-## Sai Karthik
-
-Building lightweight, production-ready Generative AI systems focused on performance, scalability, and enterprise deployment.
+- Semantic vector search using Pinecone
+- OCR support for scanned PDFs
+- Multi-document querying
+- Cross-document comparison
+- Conversation export
+- Authentication and user management
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star on GitHub!
+## 👨‍💻 Author
+
+**Sai Karthik**
+
+Building lightweight, scalable, and production-ready Generative AI applications for enterprise use.
 ````
