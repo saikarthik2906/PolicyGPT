@@ -1,132 +1,144 @@
-# ₿ Bitcoin Price Tracker
+# 🤖 PolicyGPT: Enterprise Document Assistant
 
-A modern and responsive **Bitcoin Price Tracker** that displays live BTC prices in **INR** and **USD**, interactive historical charts, real-time conversion tools, and auto-refreshing market data using the **CoinGecko Public API**.
+A lightning-fast, ultra-lightweight enterprise **Retrieval-Augmented Generation (RAG)** application built entirely in pure Python. It extracts text from policy PDFs, retrieves the most relevant clauses, and generates structured compliance-focused responses using the **Groq API**.
 
-Designed with a sleek crypto-inspired UI featuring animated visuals and responsive components.
+Designed with a premium enterprise-inspired interface featuring clean dashboards, dynamic welcome screens, document citations, and a seamless user experience.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
-![CoinGecko API](https://img.shields.io/badge/CoinGecko_API-8DC647?style=for-the-badge&logo=coingecko&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3A?style=for-the-badge&logo=langchain&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq_Cloud-F55036?style=for-the-badge&logo=google-gemini&logoColor=white)
+![PyPDF](https://img.shields.io/badge/PyPDF-000000?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-bitcoin-price-tracker/
+PolicyGPT/
 │
-├── index.html        # Main UI page
-├── style.css         # Custom styles + rotation animation
-├── script.js         # Chart, INR price & converter logic
-├── bitcoin.png       # Rotating Bitcoin logo
-└── README.md         # Project documentation
+├── .streamlit/
+│   └── secrets.toml      # API keys (ignored by Git)
+├── app.py                # Streamlit application
+├── rag.py                # Native Python RAG pipeline
+├── requirements.txt      # Project dependencies
+└── README.md             # Documentation
 ```
-
----
-
-## 📸 Screenshots
-
-> Add your application screenshots here.
-
-| Home Page | Price Chart |
-|-----------|-------------|
-| ![Home](images/home.png) | ![Chart](images/chart.png) |
 
 ---
 
 ## 🚀 Features
 
-### 📈 Live Bitcoin Price Tracking
+### 🏢 Premium Enterprise UI
 
-- Displays real-time BTC price in INR.
-- Displays BTC price in USD.
-- Auto-refreshes market data every few seconds.
+- Clean, enterprise-inspired interface.
+- Dynamic welcome screen with quick-start suggestions.
+- Toast notifications for successful document uploads.
+- Responsive chat interface with modern styling.
 
-### 📊 Interactive Price Charts
+### 📄 Intelligent PDF Processing
 
-- Historical Bitcoin price visualization.
-- Weekly chart.
-- Monthly chart.
-- Yearly chart.
+- Upload and analyze policy documents instantly.
+- Automatic text extraction from PDFs.
+- Efficient document chunking for accurate retrieval.
+- Supports multiple policy documents.
 
-### 💱 BTC ⇄ INR Converter
+### 🧠 Lightweight Native RAG Engine
 
-- Convert Bitcoin to INR instantly.
-- Reverse INR to BTC conversion.
-- Dynamic calculations using live market prices.
+- Pure Python implementation.
+- No FAISS, ChromaDB, Torch, or Sentence Transformers required.
+- Fast keyword-frequency retrieval pipeline.
+- Optimized for modern Python environments.
 
-### 🔄 Animated Bitcoin UI
+### 💬 AI-Powered Compliance Assistant
 
-- Rotating Bitcoin logo animation.
-- Smooth responsive layout.
-- Crypto-inspired dark theme.
+- Answers questions strictly from uploaded documents.
+- Handles greetings and conversational prompts naturally.
+- Prevents hallucinations by grounding responses in source documents.
+- Powered by Groq's high-speed LLM inference.
 
-### 📱 Responsive Design
+### 📚 Source Citations
 
-Optimized for:
+- Displays page numbers used to generate responses.
+- Improves transparency and traceability.
+- Makes policy verification easier.
 
-- 💻 Desktop
-- 📱 Mobile
-- 📲 Tablet
+### 🔐 Secure Configuration
 
----
-
-## 🌐 API Integration
-
-This project uses the **CoinGecko Public API** to provide:
-
-- Live Bitcoin market prices
-- Historical price chart data
-- Real-time currency conversion
-
-✅ No API key required.
+- API keys stored securely using Streamlit Secrets.
+- No API key input fields in the application.
+- Git-safe workflow with `.gitignore`.
 
 ---
 
-## ⚙️ Usage
+## ⚙️ Installation
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/bitcoin-price-tracker.git
+git clone https://github.com/saikarthik2906/PolicyGPT.git
+cd PolicyGPT
 ```
 
-Open the project folder:
+### 2. Install Dependencies
 
 ```bash
-cd bitcoin-price-tracker
+pip install -r requirements.txt
 ```
 
-Launch:
+### 3. Configure Secrets
 
-```text
-index.html
+Create a `.streamlit/secrets.toml` file:
+
+```toml
+GROQ_API_KEY = "your_groq_api_key"
 ```
 
-in any modern web browser.
+### 4. Run the Application
 
-No installation, backend, or build tools are required.
+```bash
+streamlit run app.py
+```
+
+The application will launch in your default browser.
 
 ---
 
-## 🎯 Project Scope
+## 🌐 Deployment
 
-This project demonstrates:
+Deploy for free using **Streamlit Community Cloud**.
 
-- Real-time API integration
-- Cryptocurrency dashboard development
-- Interactive financial data visualization
-- JavaScript DOM manipulation
-- Responsive frontend development
-- Animated UI components
+1. Push the project to GitHub.
+2. Connect the repository to Streamlit Cloud.
+3. Add your `GROQ_API_KEY` under **Secrets**.
+4. Deploy with one click.
 
-It serves as an excellent portfolio project for frontend developers interested in finance, cryptocurrency, and API-driven web applications.
+---
+
+## 🎯 Project Highlights
+
+- Enterprise-ready document question answering
+- Retrieval-Augmented Generation (RAG)
+- Groq LLM integration
+- PDF document processing
+- Secure secrets management
+- Lightweight architecture
+- Fast document retrieval
+- Source-aware responses with page citations
+- Modern Streamlit dashboard
+
+---
+
+## 📷 Screenshots
+
+> Add screenshots of your application here.
+
+Chat Interface |
+ ![Chat](images/chat.png) |
 
 ---
 
@@ -138,4 +150,4 @@ It serves as an excellent portfolio project for frontend developers interested i
 
 ## ⭐ Support
 
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+If you found this project useful, consider giving it a ⭐ on GitHub.
