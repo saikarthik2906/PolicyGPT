@@ -79,7 +79,7 @@ PolicyGPT/
 
 # 📸 Screenshots
 
-(Add application screenshots here)
+[Screenshots](images/chat.png)
 
 ---
 
